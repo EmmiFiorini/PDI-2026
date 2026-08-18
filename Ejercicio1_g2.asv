@@ -98,21 +98,4 @@ P_rojo_20_180
 %Utilizando solo los histogramas tengo que suponer que las probs del rojo y
 %el azul son INDEPENDIENTES --> P(rojo 100-120 Y azul 80-100)?P(rojo 100-120)×P(azul 80-100)
 
-% Probabilidad de rojo entre 100 y 120
-P_R_100_120 = sum(R(:) >= 100 & R(:) <= 120) / numel(R);
-
-% Probabilidad de azul entre 80 y 100
-P_B_80_100 = sum(B(:) >= 80 & B(:) <= 100) / numel(B);
-
-% Si asumo independencia, la probabilidad conjunta es el producto
-P_iii = P_R_100_120 * P_B_80_100;
-
-disp('d)iii) La prob de un pixel al azar que se encuentre en rojo entre 100-120 y azul 80-100 es de: ');
-P_iii
-
-%iv:
-condicion = (R >= 100 & R <= 120) & (B >= 80 & B <= 100);
-P_iv = sum(condicion(:)) / numel(R);
-disp('d)iv) La prob de un pixel al azar que se encuentre en rojo entre 100-120 y azul 80-100 es de: ');
-P_iv
 
